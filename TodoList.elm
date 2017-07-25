@@ -3,6 +3,11 @@ module Main exposing (..)
 import Html exposing (..)
 
 
+-- import ALL HTML module
+-- import Html exposing (text, div) -> only imports text and div functions
+--
+
+
 type Visibility
     = All
     | Active
@@ -45,10 +50,6 @@ keep tasks visibility =
 
         Completed ->
             List.filter (\task -> task.complete) tasks
-
-
-type alias TaskName =
-    String
 
 
 viewTasksInList : List Task -> Html msg
